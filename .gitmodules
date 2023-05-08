@@ -1,0 +1,3 @@
+[submodule "AFYA"]
+	path = AFYA
+	url = https://github.com/AhmedGamal007/AFYA-Patients-Record-Angular.git
