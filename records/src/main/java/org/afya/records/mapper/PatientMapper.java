@@ -19,6 +19,7 @@ public class PatientMapper {
                 .submissionDate(patientDTO.getSubmissionDate())
                 .note(patientDTO.getNote())
                 .status(patientDTO.getStatus())
+                .sentBy(patientDTO.getSentBy())
                 .build();
 
     }
@@ -34,6 +35,7 @@ public class PatientMapper {
         patient.setPatientNumber(patientDTO.getPatientNumber());
         patient.setSubmissionDate(patientDTO.getSubmissionDate());
         patient.setNote(patientDTO.getNote());
+        patient.setSentBy(patientDTO.getSentBy());
         patient.setStatus(patientDTO.getStatus());
         return patient;
     }

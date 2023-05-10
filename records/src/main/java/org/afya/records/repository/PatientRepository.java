@@ -4,9 +4,9 @@ import org.afya.records.model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer>, JpaSpecificationExecutor<Patient> {
-    //    @Query(value = "SELECT p FROM patient as p")
-//    Page<Patient> findAllByFilter(PatientSearchDTO patientSearchDTO);
 
 }

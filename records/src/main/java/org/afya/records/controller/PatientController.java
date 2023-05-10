@@ -3,6 +3,7 @@ package org.afya.records.controller;
 import lombok.RequiredArgsConstructor;
 
 import java.io.File;
+import java.nio.file.FileStore;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -41,9 +42,8 @@ public class PatientController {
 
     @PostMapping("/upload")
     public void uploadImage(@RequestParam("image") MultipartFile file) throws Exception{
-        String path_directory="C:\\Users\\user\\Desktop\\AFYA Project\\Front-End\\AFYA\\src\\assets\\passports";
-        System.out.println("------------------------------------"+file.getOriginalFilename()+"----------------------------------");
-
+        String path_directory="C:\\Users\\user\\Desktop\\AFYA Project\\AFYA\\src\\assets\\passports";
+        System.out.println("------------------------------------"+file.getOriginalFilename()+"----------------------------------"+file.getContentType());
         Files.copy(file.getInputStream(),Paths.get(path_directory+File.separator+file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING); 
     }
 

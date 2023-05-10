@@ -13,6 +13,7 @@ import java.util.Date;
 @Data
 @Builder
 public class PatientDTO {
+    private Integer id = null;
     private String name = null;
 
     private String passportPath = null;
@@ -32,4 +33,5 @@ public class PatientDTO {
     private Date submissionDate=null;
     private String note = null;
     private String status = null;
+    private String sentBy = null;
 }

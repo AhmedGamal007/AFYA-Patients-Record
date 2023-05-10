@@ -58,5 +58,7 @@ public class Patient{
     @Column(name = "status")
     private String status ;
 
+    @Column(name = "sent_by")
+    private String sentBy;
 }
 
